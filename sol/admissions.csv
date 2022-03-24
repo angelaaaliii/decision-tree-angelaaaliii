@@ -1,0 +1,8 @@
+GPA,high school,extra curriculars,letters of rec,outcome
+C,blue school,strong,strong,reject
+C,red school,weak,weak,reject
+A,red school,weak,strong,accept
+A,red school,strong,weak,reject
+B,blue school,weak,strong,accept
+B,red school,strong,strong,accept
+B,red school,weak,strong,reject
