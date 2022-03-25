@@ -55,47 +55,6 @@ public class DecisionTreeRunner {
         return RunResult.success(regeneratedTree, accuracy);
     }
 
-//    void train(TextArea ta) {
-//        trainingDataset = dataLoader.loadDataset();
-//        if (trainingDataset == null) {
-//            ta.appendText("Error: No file selected or unreadable file selected.\n\n");
-//            return;
-//        }
-//        treeTester.getDecisionTreeAccuracy(trainingDataset, trainingDataset, "hired");
-//        currentTree = treeTester.regenerateTreeFromTrainingData(trainingDataset);
-//
-//
-//        if (currentTree == null) {
-//            ta.appendText("Error: train tree returned null.\n\n");
-//            return;
-//        }
-//
-//        visualizer.drawTree(currentTree);
-//    }
-
-
-//    void test(TextArea ta) {
-//        if (currentTree == null) {
-//            ta.appendText("Error: Cannot test because tree has not been trained\n\n");
-//            return;
-//        }
-//
-//        if (trainingDataset == null) {
-//            ta.appendText("Error: Cannot test because tree has not been trained\n\n");
-//            return;
-//        }
-//
-//        Dataset testingData = dataLoader.loadDataset();
-//        if (testingData == null) {
-//            ta.appendText("Error: No file selected or unreadable file selected");
-//            return;
-//        }
-//
-//
-//        double accuracy = treeTester.getDecisionTreeAccuracy(testingData, "hired");
-//        ta.appendText("Test results: " + accuracy * 100 + " % of examples were classified correctly!\n\n");
-//    }
-
     public void setTargetAttribute(String targetAttribute) {
         this.targetAttribute = targetAttribute;
     }

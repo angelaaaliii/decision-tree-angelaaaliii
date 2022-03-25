@@ -11,7 +11,6 @@ public class Graph extends BaseGraphObject {
 
     private List<Node> nodeList;
     private List<Edge> edgeList;
-//    private List<Graph> subgraphList;
 
     /**
      * Constructor.
@@ -22,7 +21,6 @@ public class Graph extends BaseGraphObject {
         super(id);
         this.nodeList = new ArrayList<>();
         this.edgeList = new ArrayList<>();
-//        this.subgraphList = new ArrayList<>();
     }
 
     /**
@@ -50,23 +48,11 @@ public class Graph extends BaseGraphObject {
         dotString.append("nodesep=1.0;");
         dotString.append("graph [bgcolor=lightgrey];");
         dotString.append(this.genAttributeDotString());
-//        dotString.append(this.genSubgraphString());
         dotString.append(this.genNodesString());
         dotString.append(this.genEdgeDotString());
         dotString.append("}\n");
         return dotString.toString();
     }
-
-//    private String genSubgraphString() {
-//        StringBuilder subgraphString = new StringBuilder();
-//        for (Graph graph : this.subgraphList) {
-//            subgraphString.append("subgraph ");
-//            subgraphString.append(graph.getId());
-//            subgraphString.append(graph.genDotString());
-//            subgraphString.append("\n");
-//        }
-//        return subgraphString.toString();
-//    }
 
     private String genNodesString() {
         StringBuilder nodeString = new StringBuilder();
