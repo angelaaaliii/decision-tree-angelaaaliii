@@ -138,7 +138,7 @@ public class Dataset implements IDataset {
             if (subset.size() == maxCounter) {
                 // if some decision values occur the same number of times
                 // in the dataset, randomly pick one to return as the default
-                // as we loop through the subsets.
+                // as it loops through the subsets.
                 Random random = new Random();
                 int upperBound = 1;
                 int randomNum = random.nextInt(upperBound);

@@ -34,8 +34,7 @@ public class TreeGenerator implements ITreeGenerator<Dataset> {
         String defaultValue = training.computeDefaultValue(
                 this.targetAttribute);
 
-        // split the dataset based on the attribute that we are creating the
-        // node for.
+        // split the dataset based on the attribute created for the node.
         List<Dataset> newDataSet = training.partition(nodeAttribute);
 
         // initialize list of edges to add to.
@@ -50,7 +49,7 @@ public class TreeGenerator implements ITreeGenerator<Dataset> {
                         new Leaf(subset.getSingleValue(this.targetAttribute)));
                 edges.add(edge);
             } else if (subset.getAttributeList().size() == 0) {
-                // if we have no more attributes to split on but still have
+                // if have no more attributes to split on but still have
                 // non-unique outcomes, create a leaf storing the most
                 // common decision value in the dataset at that point.
                 Edge edge = new Edge(subset.getSingleValue(nodeAttribute),
